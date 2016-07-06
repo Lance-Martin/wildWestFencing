@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
      <link rel="stylesheet" href="assets/style.css">
@@ -23,9 +24,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#myJumbo" class = "active"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> About <span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
+            <li><a href="#gallery-header"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Gallery <span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
+            <li><a href="#reachUs"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Contact <span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -34,7 +35,7 @@
     <div class="jumbotron" id = "myJumbo">
       <h1>Wild West Fencing</h1>
     </div>
-    <div class = "row">
+    <div class = "row" id = "1">
       <div class="info col-md-6 col-md-offset-3">
         <h2>Welcome to Wild West Fencing</h2>
         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
@@ -83,7 +84,42 @@
         </a>
       </div>
     </div>
+    <div class="row" id = "reachUs">
+      <div class="col-md-2"></div>
+      <div class="col-md-4" id = "contact">
+        <h2>contact us for a free estimate</h2>
+        <p><b>Phone:</b> (512)-296-6066</p>
+        <p><b>Email:</b> wildwestfencing@yahoo.com</p>
+      </div>
+      <div class="col-md-4" id = "connect">
+        <h2>connect with us and read our reviews</h2>
+        <div class = "icons">
+          <a href = "https://www.facebook.com/Wild-West-Fencing-769142626508118/"><img id = "icon1" class = "icon"src = "assets/fb_icon.png" alt = "facebook icon"></a>
+          <a href="https://www.angieslist.com/companylist/us/tx/wimberley/wild-west-fencing-reviews-6283616.htm"><img id = "icon2" class = "icon" src="assets/angies_icon.png" alt="angies list icon"></a>
+          <a href="https://porch.com/wimberley-tx/fence-contractors/wild-west-fencing-26709116/pp"><img id = "icon3" class = "icon" src="assets/porch_icon.png" alt="porch icon link"></a>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
     <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $('.nav li a').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+          && location.hostname == this.hostname) {
+            var $target = $(this.hash);
+            $target = $target.length && $target
+            || $('[name=' + this.hash.slice(1) +']');
+            if ($target.length) {
+              var targetOffset = $target.offset().top;
+              $('html,body')
+              .animate({scrollTop: targetOffset}, 1000);
+             return false;
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
