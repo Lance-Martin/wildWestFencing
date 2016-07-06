@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'blackHawk';
+    src: url('BlackHawk.otf')format("opentype"); URL to font
+}
+@font-face {
+    font-family: 'bleedingCowboy';
+    src: url('bleedCowboy.ttf')format("truetype"); URL to font
+}
+
+.jumbotron h1 {
+  text-align: center;
+  font-family: "bleedingCowboy";
+}
+
+.info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#gallery-header {
+  text-align: center;
+  margin-bottom: 5px;
+  border-top: 3px #f5f5f5 solid;
+  padding: 0 8px 0 16px;
+}
+
+#myJumbo {
+  padding-top: 75px;
+}
+
+#imgCap {
+  margin-bottom: 30%;
+}
