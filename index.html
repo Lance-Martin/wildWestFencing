@@ -35,12 +35,24 @@
     <div class="jumbotron" id = "myJumbo">
       <h1>Wild West Fencing</h1>
     </div>
-    <div class = "row" id = "1">
+    <div class = "row" id = "info">
       <div class="info col-md-6 col-md-offset-3">
         <h2>Welcome to Wild West Fencing</h2>
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+        <p><b>Based out of Wimberley, Texas, we service the greater hill country area (South Austin to North San Antonio), and are the best choice to meet your property's fencing needs. View our image gallery below to see why.</b></p>
+        <h3>Our Services Include:</h3>
+
+          <ul id = "leftList">
+            <li><b>Cedar Post Fences</b></li>
+            <li><b>Privacy Fences</b></li>
+            <li><b>Rod Iron Fences</b></li>
+            <li><b>Picket Fences</b></li>
+            <li><b>Land Clearing</b></li>
+            <li><b>Driveway Construction</b></li>
+          </ul>
+
       </div>
     </div>
+  </div>
     <div class="row" id = "gallery-header">
       <h2>View Our Work</h2>
     </div>
@@ -101,6 +113,10 @@
       </div>
       <div class="col-md-2"></div>
     </div>
+    <div class="row" id = "footer">
+      <p>&copy; Copyright 2016 Wild West Fencing </p>
+      <p>Designed and maintained by <a href = "">Lance Martin</a></p>
+    </div>
     <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script>
@@ -112,7 +128,7 @@
             $target = $target.length && $target
             || $('[name=' + this.hash.slice(1) +']');
             if ($target.length) {
-              var targetOffset = $target.offset().top;
+              var targetOffset = $target.offset().top-30;
               $('html,body')
               .animate({scrollTop: targetOffset}, 1000);
              return false;
